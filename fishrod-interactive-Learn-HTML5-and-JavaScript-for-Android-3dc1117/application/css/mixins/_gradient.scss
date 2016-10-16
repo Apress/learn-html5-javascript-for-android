@@ -1,0 +1,8 @@
+@mixin gradient($start, $stop, $degrees) {
+  background: rgba($start, 1);
+  background: -moz-linear-gradient($degrees,  $start 0%, $stop 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(100%, $stop));
+  background: -o-linear-gradient($degrees,  $start 0%,$stop 100%);
+  background: -ms-linear-gradient($degrees,  $start 0% $stop 100%);
+  background: linear-gradient($degrees,  $start 0%, $stop 100%);
+}

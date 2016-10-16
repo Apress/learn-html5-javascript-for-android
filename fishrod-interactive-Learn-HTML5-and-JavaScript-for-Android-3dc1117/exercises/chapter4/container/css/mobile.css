@@ -1,0 +1,17 @@
+body, html, #deck {
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+#deck .card {
+	overflow: auto;
+	height: 100%;
+	position: absolute;
+	left: -100%;
+	width: 100%;
+}
+
+#deck .card.active {
+	left: 0;
+}

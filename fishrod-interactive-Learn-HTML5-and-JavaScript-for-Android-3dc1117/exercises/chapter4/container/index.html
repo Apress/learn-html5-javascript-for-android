@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; target-densitydpi=device-dpi;"/>
+		<title>Single Page Container</title>
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" />
+	</head>	
+
+	<body>
+		
+		<div id="deck">
+			
+			<section class="card" id="card-index">
+				
+				<h1>Page 1</h1>
+				<a data-method="push" href="#card-second-page">Page 2</a>
+	
+			</section>
+			
+			<section class="card active" id="card-second-page">
+				
+				<h1>Page 2</h1>
+				<a data-method="push" href="#card-third-page">Page 3</a>
+
+			</section>
+			
+			<section class="card" id="card-third-page">
+				
+				<h1>Page 3</h1>
+				<a data-method="push" href="#card-index">Page 1</a>
+				
+			</section>
+			
+		</div>
+		
+		<script>
+			
+			[].forEach.call(document.querySelectorAll('a[data-method="push"]'), function(el){
+				el.addEventListener("click", function pushCard(event){
+					var pageid = this.href.hash;
+					goToCard(pageid);
+					event.preventDefault();
+				});
+			});
+			
+			function goToCard(to){	
+				document.querySelectorAll('.card.active')[0].classList.remove('active');
+				document.querySelectorAll(to)[0].classList.add('active');
+			}
+			
+		</script>
+		
+	</body>
+
+</html>

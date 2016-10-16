@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" manifest="momemo.appcache">
+
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; target-densitydpi=device-dpi;"/>
+		<title>Mo Memo</title>
+		<link rel="stylesheet" type="text/css" href="css/mobile.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link rel="apple-touch-icon-precomposed" href="img/home-screen-icon.png">
+	</head>	
+
+	<body>
+		
+		<div id="shoe">
+		
+			<!-- Begin Taskbar -->
+			
+			<header id="taskbar" class="screenbar">
+				<h1 class="branding">Mo Memo</h1>
+				<a href="#" class="clear-search" data-controller="movies" data-action="clearSearch">Clear</a>
+				<form method="post" id="add-movie" class="horizontal">
+					<input type="text" class="full-width search" name="query" placeholder="enter your movie name&hellip;" />
+				</form>
+				
+			</header>
+			
+			<!-- End Taskbar -->
+		
+			<!-- Begin Movie List Deck -->
+		
+			<div class="deck">
+				
+				<div class="card active" id="card-favourite_list">
+					
+				</div>
+				
+				<div class="card" id="card-movie_search_results">
+					
+				</div>
+				
+				<div class="card" id="card-movie_info">
+							
+				</div>
+				
+			</div>
+			
+			<!-- End Movie List Deck -->
+		
+		</div>
+		
+		<!-- Load the applications JavaScript -->
+		<script src="js/app.dev.js"></script>
+		<script>
+			app.bootstrap.initScripts();
+		</script>
+	</body>
+
+</html>

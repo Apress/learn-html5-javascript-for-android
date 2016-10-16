@@ -1,0 +1,34 @@
+input, select, textarea, button {
+  @include box-sizing(border-box);
+}
+
+input[type="text"] {
+  border: 1px solid #000000;
+  padding: 5px;
+}
+
+input.full-width {
+  width: 100%;
+}
+
+form#add-movie {
+  margin-left: 80px;
+}
+
+input.search {
+  padding-left: 30px;
+  background: url('../img/search.png') 5px 50% no-repeat transparent;
+  background-size: auto 50%;
+  border: none;
+  border-bottom: 1px solid #BF2628;
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
+
+input.search::-webkit-input-placeholder, input.search::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input.search.loading {
+  background-image: url('../img/loading.gif');
+}

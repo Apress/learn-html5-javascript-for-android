@@ -1,0 +1,79 @@
+@media all {
+	html, body {
+		height: 100%;
+	}
+	
+	h1.device:after {
+		content: "N/A";
+	}
+	
+	p.orientation:after {
+		content: "N/A";
+	}
+}
+
+/** mobile **/
+	
+@media only screen and (max-width: 720px) {
+	
+	body {
+		background: black;
+		color: white;
+	}
+	
+	h1.device:after {
+		content: "Mobile";
+	}
+	
+	p.orientation:after {
+		content: "Portrait";
+	}
+}
+
+/** landscape mobile **/
+	
+@media only screen and (max-height: 720px) and (orientation: landscape){
+	
+	body {
+		background: yellow;
+		color: black;
+	}
+	
+	p.orientation:after {
+		content: "Landscape";
+	}
+}
+
+/**  tablet **/
+	
+@media only screen and (min-width: 780px) and (max-width: 1000px) {
+	
+	body {
+		background: black;
+		color: white;
+	}
+
+	h1.device:after {
+		content: "Tablet";
+	}
+	
+	p.orientation:after {
+		content: "Portrait";
+	}
+	
+}
+
+	
+/**  landscape tablet **/
+	
+@media only screen and (min-height: 780px) {
+	
+	body {
+		background: yellow;
+		color: black;
+	}
+	
+	p.orientation:after {
+		content: "Landscape";
+	}
+}

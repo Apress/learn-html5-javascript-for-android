@@ -1,0 +1,19 @@
+.test-tablet {
+  background: url("../themes/bentley/common/logo.png") no-repeat top left black; }
+
+.test-phone {
+  background: url("../themes/bentley/common/logo.png") no-repeat top left black; }
+
+.block, .sidebar-block {
+  background: #cedce7;
+  background: -moz-linear-gradient(-45deg, rgba(206, 220, 231, 0.5) 0%, #596a72 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(206, 220, 231, 0.5)), color-stop(100%, #596a72));
+  background: -o-linear-gradient(-45deg, rgba(206, 220, 231, 0.5) 0%, #596a72 100%);
+  background: -ms-linear-gradient(-45deg, rgba(206, 220, 231, 0.5) 0% #596a72 100%);
+  background: linear-gradient(-45deg, rgba(206, 220, 231, 0.5) 0%, #596a72 100%); }
+
+.block.wide, .wide.sidebar-block {
+  width: 100px; }
+
+.sidebar-block {
+  border-radius: 10px; }

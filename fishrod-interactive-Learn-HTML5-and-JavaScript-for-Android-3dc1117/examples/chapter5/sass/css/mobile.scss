@@ -1,0 +1,27 @@
+$theme: "bentley";
+$color: #000000;
+
+@import "partials/tablet";
+@import "partials/phone";
+
+@mixin gradient($start, $stop, $degrees) {
+  background: rgba($start, 1);
+  background: -moz-linear-gradient($degrees,  $start 0%, $stop 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $start), color-stop(100%, $stop));
+  background: -o-linear-gradient($degrees,  $start 0%,$stop 100%);
+  background: -ms-linear-gradient($degrees,  $start 0% $stop 100%);
+  background: linear-gradient($degrees,  $start 0%, $stop 100%);
+}
+
+.block {
+  @include gradient(rgba(206,220,231,0.5), rgba(89,106,114,1), -45deg);
+}
+
+.block.wide {
+  width: 100px;
+}
+
+.sidebar-block {
+  border-radius: 10px;
+  @extend .block;
+}

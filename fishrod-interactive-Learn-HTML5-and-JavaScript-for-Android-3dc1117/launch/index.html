@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; target-densitydpi=device-dpi;"/>
+		<title>Scan Me!</title>
+	
+		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/jquery/jquery.qrcode.min.js"></script>
+	
+	</head>	
+
+	<body>
+		
+		<form id="quick-launcher">
+			
+			<label>Select Project Destination
+				<select name="launch-paths">
+					<optgroup label="Applications">
+						<option value="/application/">Mo Memo</option>
+					</optgroup>
+					<optgroup label="Chapter 4 Exercises">
+						<option value="/exercises/chapter4/standard/">Standard Paging</option>
+						<option value="/exercises/chapter4/ajax/">Ajax Paging</option>
+						<option value="/exercises/chapter4/container/">Single Page Container Paging</option>
+					</optgroup>
+					<optgroup label="Chapter 5 Examples">
+						<option value="/examples/chapter5/media-queries/">Media Queries</option>
+						<optgroup label="CSS3 Features">
+							<option value="/examples/chapter5/font-face/">@font-face</option>
+							<option value="/examples/chapter5/shadow/">Shadow</option>
+							<option value="/examples/chapter5/gradients/">Gradients</option>
+						</optgroup>
+						<optgroup label="Transitions">
+							<option value="/examples/chapter5/animation/transitions.html">Transitions</option>
+							<option value="/examples/chapter5/animation/animations.html">Animations</option>
+						</optgroup>
+					</optgroup>
+					<optgroup label="Chapter 6 Examples">
+						<option value="/examples/chapter6/geolocation/index.html">Geolocation</option>
+					</optgroup>	
+					<optgroup label="Chapter 7 Examples">
+						<option value="/examples/chapter7/jquery-mobile/">jQuery Mobile</option>
+						<option value="/examples/chapter7/jquery-mobile/">Sencha</option>
+					</optgroup>
+					<optgroup label="Chapter 7 Exercises">
+						<option value="/exercises/chapter7/canvas/">Canvas</option>
+						<option value="/exercises/chapter7/events/">Events</option>
+					</optgroup>
+				</select>
+			</label>
+			
+		</form>
+		
+		<div id="qrcode"></div>
+
+		<script>
+			$('select[name="launch-paths"]').on("change", function(){
+				var url = window.location.href.replace(/\/launch(.*)/i, "");
+				url += $(this).val();
+				$('#qrcode').html('');
+				$('#qrcode').qrcode(url);
+			});	
+		</script>
+		
+	</body>
+
+</html>

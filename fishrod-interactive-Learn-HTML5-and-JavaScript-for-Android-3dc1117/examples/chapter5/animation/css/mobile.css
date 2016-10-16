@@ -1,0 +1,66 @@
+.test {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-radius: 50px;
+	background-color: blue;
+	transition: left 2s ease-out 2s, background-color 10s ease 0s;
+	-moz-transition: left 2s ease-out 2s, background-color 10s ease 0s;
+	-webkit-transition: left 2s ease-out 2s, background-color 10s ease 0s;
+	-o-transition: left 2s ease-out 2s, background-color 10s ease 0s;
+}
+
+.second-position {
+	left: 50%;
+	border-radius: 50px;
+	background-color: yellow;
+}
+
+@keyframes bouncyball {
+	0% { bottom: 100%; left: 0px; }
+	12.5% { bottom: 0px; left: 12.5%; }
+	25% { bottom: 50%; left: 25%; }
+	37.5% { bottom: 0px; left: 37.5%; }
+	50% { bottom: 25%; left: 50%; }
+	62.5% { bottom: 0px; left: 62.5% }
+	75% {bottom: 12.5%; left: 75% }
+	87.5% {bottom: 0px; left: 87.5% }
+	100% { bottom: 0px; left: 100% }
+}
+
+@-moz-keyframes bouncyball {
+	0% { bottom: 100%; left: 0px; }
+	12.5% { bottom: 0px; left: 12.5%; }
+	25% { bottom: 50%; left: 25%; }
+	37.5% { bottom: 0px; left: 37.5%; }
+	50% { bottom: 25%; left: 50%; }
+	62.5% { bottom: 0px; left: 62.5% }
+	75% {bottom: 12.5%; left: 75% }
+	87.5% {bottom: 0px; left: 87.5% }
+	100% { bottom: 0px; left: 100% }
+}
+
+@-webkit-keyframes bouncyball {
+	0% { bottom: 100%; left: 0px; }
+	12.5% { bottom: 0px; left: 12.5%; }
+	25% { bottom: 50%; left: 25%; }
+	37.5% { bottom: 0px; left: 37.5%; }
+	50% { bottom: 25%; left: 50%; }
+	62.5% { bottom: 0px; left: 62.5% }
+	75% {bottom: 12.5%; left: 75% }
+	87.5% {bottom: 0px; left: 87.5% }
+	100% { bottom: 0px; left: 100% }
+}
+
+.ball {
+	background: black;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 50px;
+	animation: bouncyball 2s ease-in-out;
+	-moz-animation: bouncyball 2s ease-in-out;
+	-webkit-animation: bouncyball 2s ease-in-out;
+}

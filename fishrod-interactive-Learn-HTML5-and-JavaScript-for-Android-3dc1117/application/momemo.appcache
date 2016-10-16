@@ -1,0 +1,13 @@
+CACHE MANIFEST
+
+# We'll make these files cachable
+CACHE:
+index.html
+css/mobile.min.css
+js/app.min.js
+http://fonts.googleapis.com/css?family=Arimo
+img/*
+
+# These files require a network connection
+NETWORK:
+http://api.rottentomatoes.com/

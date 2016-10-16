@@ -1,0 +1,22 @@
+body {
+
+}
+
+.left, .right {
+	font-family: Condiment;
+	font-weight: bold;
+	font-size: 70px;
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding-top: 90px;
+	color: #CCCCCC;
+}
+
+.shadow {
+	text-shadow: 3px 3px 10px #000000;
+}
+
+.stroke {
+	-webkit-text-stroke: 1px #000000;
+}
